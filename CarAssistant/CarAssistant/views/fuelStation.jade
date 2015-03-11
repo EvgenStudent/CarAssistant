@@ -7,7 +7,7 @@ block headerScripts
         |function initialize() {
         |  var mapOptions = {
         |   zoom: 13,
-        |    center: new google.maps.LatLng(#{model.x}, #{model.y})
+        |    center: new google.maps.LatLng(#{model.from.x}, #{model.from.y})
         | };
         |  map = new google.maps.Map(document.getElementById('map-canvas'),
         |      mapOptions);

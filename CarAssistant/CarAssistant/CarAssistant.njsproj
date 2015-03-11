@@ -38,8 +38,7 @@
     <Compile Include="public\javascripts\jquery.validate.unobtrusive.min.js" />
     <Compile Include="public\javascripts\modernizr-2.8.3.js" />
     <Compile Include="public\javascripts\respond.min.js" />
-    <Compile Include="routes\index.js" />
-    <Compile Include="routes\users.js" />
+    <Compile Include="routes\routes.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
     <Content Include="public\javascripts\jquery-2.1.3.min.map" />
@@ -47,6 +46,7 @@
     <Content Include="public\stylesheets\bootstrap.min.css" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />
+    <Content Include="views\fuelStation.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
     <Content Include="views\error.jade" />
