@@ -10,6 +10,8 @@ html
     script(src='/javascripts/jquery-2.1.3.min.js')
     script(src='/javascripts/bootstrap.min.js')
     script(src='/javascripts/respond.min.js')
+    block headerScripts
+    block styles
   body
     .navbar.navbar-inverse.navbar-fixed-top
       .container
@@ -26,4 +28,4 @@ html
     .container.body-content
       block content
       
-    block scripts
+    block bodyScripts
