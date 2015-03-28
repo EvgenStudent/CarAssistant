@@ -1,0 +1,14 @@
+{
+  "port": 8000,
+  "mongoose": {
+    "uri": "mongodb://localhost/testDB"
+  },
+  "map": {
+    "urlTemplate": "http://nominatim.openstreetmap.org/search?q={0},{1}[fuel]&format=json&polygon=0&addressdetails=1&limit=50&viewbox={2},{3},{4},{5}",
+    "radius": 0.001595,
+    "radiusMultiplier": 2.0,
+    "responseFormat": [
+      "lat", "lon", "display_name", "place_id"
+    ]
+  }
+}
