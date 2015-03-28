@@ -1,8 +1,6 @@
 {
-    "name": "NodeAPI",
-    "version": "0.1.0",
-    "author": "Evgeny Aleksandrov",
-    "description": "simple example of RESTful API with Node.js",
+    "name": "CarAssistent",
+    "version": "1.0.0",
     "private": true,
     "scripts": {
         "start": "node ./server.js"
@@ -13,5 +11,4 @@
         "nconf"    : "~0.6.x",
         "winston"  : "~0.7.x"
     },
-    "license": "MIT"
 }
