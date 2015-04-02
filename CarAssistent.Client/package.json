@@ -7,7 +7,7 @@
     },
     "dependencies" : {
         "express"  : "~3.3.x",
-        "nconf"    : "~0.6.x",
-        "winston"  : "~0.7.x"
+        "nconf"    : "~0.x.x",
+        "winston"  : "~0.x.x"
     }
 }

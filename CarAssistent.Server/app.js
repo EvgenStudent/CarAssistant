@@ -34,7 +34,30 @@ app.get('/api', function (req, res) {
 app.get('/api/stations', function(req, res) {
     var lat = req.query.lat;
     var lon = req.query.lon;
+
+    if (lat == null || lon == null) {
+        res.status(400);
+        res.send({ error: 'There are no options lat and lon' });
+        return;
+    }
+
     fuelController.getAllStation(lat, lon, function (response){
+        res.status(200);
+        res.send(response);
+    });
+});
+
+app.get('/api/neareststation', function(req, res) {
+    var lat = req.query.lat;
+    var lon = req.query.lon;
+
+    if (lat == null || lon == null) {
+        res.status(400);
+        res.send({ error: 'There are no options lat and lon' });
+        return;
+    }
+
+    fuelController.getNearestStation(lat, lon, function (response){
         res.status(200);
         res.send(response);
     });
