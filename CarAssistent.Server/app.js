@@ -42,6 +42,8 @@ app.get('/api/stations', function(req, res) {
     }
 
     fuelController.getAllStation(lat, lon, function (response){
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "X-Requested-With");
         res.status(200);
         res.send(response);
     });
@@ -58,6 +60,8 @@ app.get('/api/neareststation', function(req, res) {
     }
 
     fuelController.getNearestStation(lat, lon, function (response){
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "X-Requested-With");
         res.status(200);
         res.send(response);
     });
