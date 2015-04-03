@@ -1,21 +1,19 @@
 'use strict';
 
 angular.module('carAssistentclientApp')
-  .controller('StationController', ['$http', function ($http, $scope) {
+  .controller('StationController', ['stationService', function (stationService, $scope) {
+
+    debugger;
 
     if(navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
         var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-        $http.get("http://localhost:8000/api/stations?lat=" + pos.k + "&lon=" + pos.D)
-          .success(function (response) {
-            debugger;
-            for (var i = 0; i < response.length; i++){
-              createMarker(response[i]);
-            };
-          }).error(function (err, status) {
-            debugger;
-          });
+        stationService.getAllStations(pos.k, pos.D).then(function (data) {
+          debugger;
+        }, function (error) {
+          debugger;
+        });
 
         var mapOptions = {
           zoom: 13,

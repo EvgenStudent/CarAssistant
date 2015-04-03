@@ -37,12 +37,22 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="782">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            <state vertical-scroll-proportion="-25.846153" vertical-offset="263" max-vertical-offset="1156">
+              <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
               <folding>
                 <element signature="e#634#847#0" expanded="false" />
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+              <caret line="15" column="38" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,13 +67,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="fuelstationservice.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/services/fuelstationservice.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.109902" vertical-offset="0" max-vertical-offset="1173">
-              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.2959739" vertical-offset="0" max-vertical-offset="1139">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
-                <element signature="e#1868#2300#0" expanded="false" />
+                <element signature="e#1717#2149#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -75,9 +95,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/styles/main.css" />
         <option value="$PROJECT_DIR$/app/views/main.html" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/scripts/services/fuelstationservice.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
       </list>
     </option>
@@ -218,6 +239,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarAssistent.Client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarAssistent.Client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -326,34 +369,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="919">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="919">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/about.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="919">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -366,14 +385,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="696" max-vertical-offset="1615">
+          <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="782">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        <state vertical-scroll-proportion="-25.846153" vertical-offset="263" max-vertical-offset="1156">
+          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
           <folding>
             <element signature="e#634#847#0" expanded="false" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -385,20 +420,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/fuelstationservice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="696" max-vertical-offset="1615">
-          <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.109902" vertical-offset="0" max-vertical-offset="1173">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2959739" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#1868#2300#0" expanded="false" />
+            <element signature="e#1717#2149#0" expanded="false" />
           </folding>
         </state>
       </provider>
