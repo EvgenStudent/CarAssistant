@@ -1,16 +1,14 @@
 'use strict';
 
 angular.module('carAssistentclientApp')
-  .controller('StationController', ['stationService', function (stationService, $scope) {
-
-    debugger;
-
+  .controller('StationController', function (stationService, $scope) {
     if(navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
         var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
         stationService.getAllStations(pos.k, pos.D).then(function (data) {
-          debugger;
+          for (var i = 0; i < data.length; i++)
+            createMarker(data[i]);
         }, function (error) {
           debugger;
         });
@@ -20,13 +18,6 @@ angular.module('carAssistentclientApp')
           center: pos
         };
         $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-        var infowindow = new google.maps.InfoWindow({
-          map: $scope.map,
-          position: pos,
-          content: 'Location found using HTML5.'
-        });
-
         $scope.map.setCenter(pos);
       }, function() {
         handleNoGeoLocation(true);
@@ -36,27 +27,19 @@ angular.module('carAssistentclientApp')
       handleNoGeoLocation(false);
     }
 
-
-    $scope.markers = [];
-    var createMarker = function (info){
+    function createMarker(info){
       var infoWindow = new google.maps.InfoWindow();
       var marker = new google.maps.Marker({
         map: $scope.map,
         position: new google.maps.LatLng(info.lat, info.lon),
         title: info.display_name
       });
-      marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
 
       google.maps.event.addListener(marker, 'click', function(){
-        infoWindow.setContent('<h5>' + marker.title + '</h5>' + marker.content);
+        infoWindow.setContent('<h6>' + marker.title + '</h6>');
         infoWindow.open($scope.map, marker);
       });
-
-      $scope.markers.push(marker);
     };
-
-
-
     function handleNoGeoLocation(errorFlag) {
       if (errorFlag) {
         var content = 'Error: The Geolocation service failed.';
@@ -73,4 +56,4 @@ angular.module('carAssistentclientApp')
       var infowindow = new google.maps.InfoWindow(options);
       $scope.map.setCenter(options.position);
     }
-  }]);
+  });
