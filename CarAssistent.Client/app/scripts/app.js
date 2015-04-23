@@ -15,9 +15,9 @@ angular
         templateUrl: 'views/main.html',
         controller: 'StationController'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/neareststation', {
+        templateUrl: 'views/main.html',
+        controller: 'NearestStationController'
       })
       .otherwise({
         redirectTo: '/'

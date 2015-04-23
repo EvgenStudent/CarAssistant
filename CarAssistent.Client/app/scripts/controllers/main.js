@@ -5,13 +5,13 @@ angular.module('carAssistentclientApp')
     if(navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
         var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-        createMarker(position.coords.latitude, position.coords.longitude, null, false, 'images/mymarker.png');
 
         stationService.getAllStations(pos.k, pos.D).then(function (data) {
+          createMarker(position.coords.latitude, position.coords.longitude, null, false, 'images/mymarker.png');
           for (var i = 0; i < data.length; i++)
             createMarker(data[i].lat, data[i].lon, data[i].display_name, true, 'images/objectmarker.png');
-        }, function (error) {
-          debugger;
+        }, function (error, status) {
+          console.log("Bad response in All Stations. Status: " + status);
         });
 
         var mapOptions = {
