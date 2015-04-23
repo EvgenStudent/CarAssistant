@@ -1,11 +1,15 @@
 'use strict';
 
 angular.module('carAssistentclientApp')
-  .service('stationService', ['$http', '$q', function stationService($http, $q) {
+  .service('stationService', ['$http', '$q', '$localStorage', 'settings', function stationService($http, $q, $localStorage, settings) {
     var getAllStations = function (lat, long) {
       var deferred = $q.defer();
-      $http.get("http://localhost:8000/api/stations?lat=" + lat + "&lon=" + long)
+      $http.get(settings.apiBaseUri + "/stations?lat=" + lat + "&lon=" + long)
         .success(function (response) {
+          $localStorage.myPositionLat = lat;
+          $localStorage.myPositionLong = long;
+          $localStorage.getAllStations = response;
+
           deferred.resolve(response);
         }).error(function (err, status) {
           deferred.reject(err);
@@ -15,8 +19,11 @@ angular.module('carAssistentclientApp')
 
     var getNearestStation = function (lat, long) {
       var deferred = $q.defer();
-      $http.get("http://localhost:8000/api/neareststation?lat=" + lat + "&lon=" + long)
+      $http.get(settings.apiBaseUri + "/neareststation?lat=" + lat + "&lon=" + long)
         .success(function (response) {
+          $localStorage.myPositionLat = lat;
+          $localStorage.myPositionLong = long;
+
           deferred.resolve(response);
         }).error(function (err, status) {
           deferred.reject(err);

@@ -1,15 +1,20 @@
 'use strict';
 
-angular
-  .module('carAssistentclientApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+var app = angular.module('carAssistentclientApp', [
+  'ngAnimate',
+  'ngCookies',
+  'ngResource',
+  'ngRoute',
+  'ngSanitize',
+  'ngStorage',
+  'ngTouch'
+]);
+
+app.constant('settings', {
+  apiBaseUri: 'http://localhost:8000/api'
+});
+
+app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
