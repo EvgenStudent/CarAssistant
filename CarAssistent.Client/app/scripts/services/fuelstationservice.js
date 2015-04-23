@@ -7,10 +7,8 @@ angular.module('carAssistentclientApp')
       var deferred = $q.defer();
       $http.get("http://localhost:8000/api/stations?lat=" + lat + "&lon=" + long)
         .success(function (response) {
-          debugger;
           deferred.resolve(response);
         }).error(function (err, status) {
-          debugger;
           deferred.reject(err);
         });
       return deferred.promise;

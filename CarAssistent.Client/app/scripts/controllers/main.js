@@ -5,10 +5,11 @@ angular.module('carAssistentclientApp')
     if(navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
         var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        createMarker(position.coords.latitude, position.coords.longitude, null, false, 'images/mymarker.png');
 
         stationService.getAllStations(pos.k, pos.D).then(function (data) {
           for (var i = 0; i < data.length; i++)
-            createMarker(data[i]);
+            createMarker(data[i].lat, data[i].lon, data[i].display_name, true, 'images/objectmarker.png');
         }, function (error) {
           debugger;
         });
@@ -27,18 +28,20 @@ angular.module('carAssistentclientApp')
       handleNoGeoLocation(false);
     }
 
-    function createMarker(info){
+    function createMarker(lat, lon, title, isClickable, icon){
       var infoWindow = new google.maps.InfoWindow();
       var marker = new google.maps.Marker({
         map: $scope.map,
-        position: new google.maps.LatLng(info.lat, info.lon),
-        title: info.display_name
+        position: new google.maps.LatLng(lat, lon),
+        title: title,
+        icon: icon
       });
 
-      google.maps.event.addListener(marker, 'click', function(){
-        infoWindow.setContent('<h6>' + marker.title + '</h6>');
-        infoWindow.open($scope.map, marker);
-      });
+      if (isClickable)
+        google.maps.event.addListener(marker, 'click', function(){
+          infoWindow.setContent('<h6 style="width: 250px;">' + marker.title + '</h6>');
+          infoWindow.open($scope.map, marker);
+        });
     };
     function handleNoGeoLocation(errorFlag) {
       if (errorFlag) {
